@@ -3,13 +3,11 @@ package com.template.authentication.authentication.controller;
 import com.template.authentication.authentication.model.AuthenticationRequest;
 import com.template.authentication.authentication.model.AuthenticationResponse;
 import com.template.authentication.authentication.model.RegisterRequest;
+import com.template.authentication.authentication.model.User;
 import com.template.authentication.authentication.service.AuthenticationService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/api/v1/auth")
@@ -26,7 +24,7 @@ public class AuthenticationController {
     }
 
     @PostMapping("/authenticate")
-    public ResponseEntity<AuthenticationResponse> register (
+    public ResponseEntity<AuthenticationResponse> authenticate (
             @RequestBody AuthenticationRequest request
     ) {
         return  ResponseEntity.ok(authService.authenticate(request));

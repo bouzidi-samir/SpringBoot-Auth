@@ -1,6 +1,6 @@
 package com.template.authentication.authentication.config;
 
-import com.template.authentication.authentication.repository.UserRepository;
+import com.template.authentication.authentication.model.repository.UserRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
